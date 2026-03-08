@@ -1,0 +1,25 @@
+---
+interface Props {
+  class?: string;
+  size?: number;
+}
+const { class: className = '', size = 48 } = Astro.props;
+---
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class={className}>
+  <!-- Outer frame -->
+  <rect x="4" y="6" width="40" height="36" rx="1" />
+  <!-- Left sliding door -->
+  <rect x="5.5" y="7.5" width="19" height="33" />
+  <!-- Right sliding door -->
+  <rect x="23.5" y="7.5" width="19" height="33" />
+  <!-- Left door vertical divider -->
+  <line x1="15" y1="7.5" x2="15" y2="40.5" />
+  <!-- Right door vertical divider -->
+  <line x1="33" y1="7.5" x2="33" y2="40.5" />
+  <!-- Left handle -->
+  <line x1="22" y1="22" x2="22" y2="28" />
+  <!-- Right handle -->
+  <line x1="26" y1="22" x2="26" y2="28" />
+  <!-- Floor line -->
+  <line x1="2" y1="42" x2="46" y2="42" />
+</svg>

@@ -1,0 +1,138 @@
+---
+import LanguageSwitcher from '../LanguageSwitcher.astro';
+import Button from '../ui/Button.astro';
+import { getLangFromUrl, getTranslations, getLocalePath } from '../../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = getTranslations(lang);
+const base = lang === 'sr' ? '' : `/${lang}`;
+
+const navLinks = [
+  { label: t.nav.about, href: `${base}/#o-nama` },
+  { label: t.nav.services, href: `${base}/#usluge` },
+  { label: t.nav.products, href: `${base}/#proizvodi` },
+  { label: t.nav.gallery, href: `${base}/#galerija` },
+  { label: t.nav.contact, href: `${base}/#kontakt` },
+];
+---
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href={getLocalePath(lang)} class="flex items-center gap-2 group">
+        <span class="text-2xl font-bold text-white navbar-scrolled-text group-hover:text-accent-400 transition-colors">
+          Wieder<span class="text-accent-400">Bau</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-1">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="px-3 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg hover:bg-white/10 transition-all nav-link"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-3">
+        <LanguageSwitcher />
+        <div class="hidden md:block">
+          <Button href={`${base}/#kontakt`} size="sm" variant="secondary">
+            {t.nav.getQuote}
+          </Button>
+        </div>
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+          aria-label="Menu"
+        >
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden fixed inset-0 top-20 bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-40"
+  >
+    <div class="flex flex-col p-6 gap-2">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="px-4 py-3 text-lg font-medium text-gray-800 hover:text-primary-700 hover:bg-gray-50 rounded-xl transition-colors mobile-nav-link"
+        >
+          {link.label}
+        </a>
+      ))}
+      <div class="mt-4">
+        <Button href={`${base}/#kontakt`} size="md" variant="primary" class="w-full">
+          {t.nav.getQuote}
+        </Button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar-scrolled .nav-link {
+    color: rgb(55, 65, 81);
+  }
+  .navbar-scrolled .nav-link:hover {
+    color: rgb(3, 105, 161);
+    background-color: rgb(240, 249, 255);
+  }
+  .navbar-scrolled .navbar-scrolled-text,
+  .navbar-scrolled span.text-2xl {
+    color: rgb(17, 24, 39);
+  }
+  .navbar-scrolled #lang-btn:hover {
+    background-color: rgb(243, 244, 246);
+  }
+  .navbar-scrolled #mobile-menu-btn {
+    color: rgb(55, 65, 81);
+  }
+</style>
+
+<script>
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  let menuOpen = false;
+
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+    if (menuOpen) {
+      mobileMenu?.classList.remove('translate-x-full');
+      mobileMenu?.classList.add('translate-x-0');
+      menuIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+    } else {
+      mobileMenu?.classList.add('translate-x-full');
+      mobileMenu?.classList.remove('translate-x-0');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    }
+  }
+
+  mobileBtn?.addEventListener('click', toggleMenu);
+
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (menuOpen) toggleMenu();
+    });
+  });
+</script>

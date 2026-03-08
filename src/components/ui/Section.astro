@@ -1,0 +1,24 @@
+---
+interface Props {
+  id?: string;
+  bg?: 'white' | 'gray' | 'dark';
+  class?: string;
+  noPadding?: boolean;
+}
+
+const { id, bg = 'white', class: className = '', noPadding = false } = Astro.props;
+
+const bgClasses = {
+  white: 'bg-white',
+  gray: 'bg-gray-50',
+  dark: 'bg-primary-950 text-white',
+};
+
+const padding = noPadding ? '' : 'py-20 md:py-28';
+---
+
+<section id={id} class={`${bgClasses[bg]} ${padding} ${className}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <slot />
+  </div>
+</section>

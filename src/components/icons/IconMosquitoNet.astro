@@ -1,0 +1,24 @@
+---
+interface Props {
+  class?: string;
+  size?: number;
+}
+const { class: className = '', size = 48 } = Astro.props;
+---
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class={className}>
+  <!-- Window frame -->
+  <rect x="8" y="6" width="32" height="36" rx="1" />
+  <!-- Mesh pattern - horizontal lines -->
+  <line x1="10" y1="12" x2="38" y2="12" stroke-width="0.5" />
+  <line x1="10" y1="18" x2="38" y2="18" stroke-width="0.5" />
+  <line x1="10" y1="24" x2="38" y2="24" stroke-width="0.5" />
+  <line x1="10" y1="30" x2="38" y2="30" stroke-width="0.5" />
+  <line x1="10" y1="36" x2="38" y2="36" stroke-width="0.5" />
+  <!-- Mesh pattern - vertical lines -->
+  <line x1="14" y1="8" x2="14" y2="40" stroke-width="0.5" />
+  <line x1="20" y1="8" x2="20" y2="40" stroke-width="0.5" />
+  <line x1="26" y1="8" x2="26" y2="40" stroke-width="0.5" />
+  <line x1="32" y1="8" x2="32" y2="40" stroke-width="0.5" />
+  <!-- Window sill -->
+  <line x1="6" y1="42" x2="42" y2="42" />
+</svg>

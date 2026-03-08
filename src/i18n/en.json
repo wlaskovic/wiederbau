@@ -1,0 +1,160 @@
+{
+  "lang": "en",
+  "langName": "English",
+  "flag": "🇬🇧",
+
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "whyUs": "Why Us",
+    "gallery": "Gallery",
+    "areas": "Service Area",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+
+  "hero": {
+    "title": "WiederBau",
+    "subtitle": "PVC & ALU Joinery",
+    "tagline": "German Quality in the Heart of Vojvodina",
+    "description": "A family company with over 25 years of experience in PVC and ALU joinery installation, roller blinds, and mosquito nets.",
+    "cta1": "Get a Quote",
+    "cta2": "Our Products",
+    "scrollDown": "Scroll down"
+  },
+
+  "about": {
+    "sectionTitle": "About Us",
+    "sectionSubtitle": "A family tradition of quality",
+    "paragraph1": "WiederBau is a family business from Sombor with over 25 years of experience in PVC and ALU joinery. From the very beginning, our mission has been to provide every client with top quality and precise installation.",
+    "paragraph2": "We exclusively use VEKA German profiles and ALUMIL aluminum systems — brands that guarantee durability, energy efficiency, and modern design. From measurement to final installation, every step is done professionally and with care.",
+    "paragraph3": "Our team of experts covers the entire Vojvodina region — from Sombor, through Odžaci and Apatin, to Subotica. We are proud of every completed project and satisfied client.",
+    "stat1Value": "25+",
+    "stat1Label": "Years of experience",
+    "stat2Value": "1000+",
+    "stat2Label": "Satisfied clients",
+    "stat3Value": "5000+",
+    "stat3Label": "Installed units"
+  },
+
+  "services": {
+    "sectionTitle": "Our Services",
+    "sectionSubtitle": "Complete solutions for your home",
+    "pvcTitle": "PVC Windows & Doors",
+    "pvcDesc": "High-quality PVC windows and doors with VEKA 5-chamber profiles for maximum energy efficiency and sound insulation.",
+    "aluTitle": "ALU Windows & Doors",
+    "aluDesc": "Premium ALUMIL aluminum systems for a modern look and exceptional performance. Ideal for large glass surfaces.",
+    "terraceTitle": "Terrace Glazing",
+    "terraceDesc": "ALUMIL sliding walls that close the terrace but never separate it from nature. Enjoy the view all year round.",
+    "blindsTitle": "Roller Blinds",
+    "blindsDesc": "Installation and repair of all types of roller blinds — PVC, aluminum, and electric blinds for your home's security and comfort.",
+    "netsTitle": "Mosquito Nets",
+    "netsDesc": "Custom-made mosquito nets — fixed, sliding, and roller systems to protect against insects.",
+    "repairTitle": "Repairs & Service",
+    "repairDesc": "Fast and reliable service for all types of PVC and ALU joinery. Glass, hardware, lock, and seal replacement.",
+    "learnMore": "Learn more"
+  },
+
+  "products": {
+    "sectionTitle": "Our Products",
+    "sectionSubtitle": "Premium brands, proven quality",
+    "tabPvc": "PVC Joinery",
+    "tabAlu": "ALU Joinery",
+    "tabBlinds": "Roller Blinds",
+    "tabNets": "Mosquito Nets",
+    "pvcTitle": "VEKA PVC Profiles",
+    "pvcDesc": "We exclusively use VEKA German 5-chamber profiles — Class A according to DIN EN 12608. VEKA profiles guarantee:",
+    "pvcFeature1": "Excellent thermal insulation",
+    "pvcFeature2": "Sound insulation up to 47dB",
+    "pvcFeature3": "UV radiation resistance",
+    "pvcFeature4": "Durability of 50+ years",
+    "pvcFeature5": "Custom arch shaping",
+    "aluTitle": "ALUMIL Aluminum Systems",
+    "aluDesc": "ALUMIL systems offer modern design and exceptional performance for large glass surfaces:",
+    "aluFeature1": "Sliding walls for terraces",
+    "aluFeature2": "Minimalist profiles",
+    "aluFeature3": "High glass load capacity",
+    "aluFeature4": "Water resistance and security",
+    "blindsTitle": "Roller Blinds for Every Home",
+    "blindsDesc": "We offer a wide range of roller blinds tailored to your needs:",
+    "blindsFeature1": "PVC roller blinds",
+    "blindsFeature2": "Aluminum roller blinds",
+    "blindsFeature3": "Electric remote-controlled blinds",
+    "blindsFeature4": "Garage roller doors",
+    "netsTitle": "Custom Mosquito Nets",
+    "netsDesc": "Protect your home from insects with our mosquito net systems:",
+    "netsFeature1": "Fixed mosquito nets",
+    "netsFeature2": "Sliding mosquito nets",
+    "netsFeature3": "Roller mosquito nets",
+    "netsFeature4": "Pleated mosquito nets"
+  },
+
+  "whyUs": {
+    "sectionTitle": "Why Choose WiederBau",
+    "sectionSubtitle": "Your reliable joinery partner",
+    "stat1Value": "25+",
+    "stat1Label": "Years of experience",
+    "stat1Desc": "A family company with a tradition of quality since 1999",
+    "stat2Value": "VEKA & ALUMIL",
+    "stat2Label": "Premium brands",
+    "stat2Desc": "We exclusively use proven German and European profiles",
+    "stat3Value": "Complete",
+    "stat3Label": "Service",
+    "stat3Desc": "From measurement and consulting to production and professional installation",
+    "stat4Value": "Subsidies",
+    "stat4Label": "Documentation support",
+    "stat4Desc": "We help you apply for government energy efficiency subsidies"
+  },
+
+  "gallery": {
+    "sectionTitle": "Our Work Gallery",
+    "sectionSubtitle": "Browse our projects",
+    "filterAll": "All",
+    "filterWindows": "Windows",
+    "filterDoors": "Doors",
+    "filterTerraces": "Terraces",
+    "filterBlinds": "Blinds",
+    "close": "Close"
+  },
+
+  "areas": {
+    "sectionTitle": "Service Area",
+    "sectionSubtitle": "We cover all of Vojvodina",
+    "description": "Our team covers Sombor and the wider region. Contact us for your location — we come to your address for free measurement.",
+    "cities": ["Sombor", "Odžaci", "Crvenka", "Apatin", "Subotica", "Kula", "Bačka Topola"]
+  },
+
+  "contact": {
+    "sectionTitle": "Contact Us",
+    "sectionSubtitle": "Request a free quote",
+    "infoTitle": "Contact Information",
+    "address": "Miloša Obilića 73, Sombor, Serbia",
+    "phone": "+381 64 216 1008",
+    "email": "wiederbau.sombor@gmail.com",
+    "workingHours": "Working Hours",
+    "weekdays": "Monday - Friday: 08:00 - 17:00",
+    "saturday": "Saturday: 08:00 - 13:00",
+    "sunday": "Sunday: Closed",
+    "followUs": "Follow Us",
+    "formTitle": "Request a Quote",
+    "formName": "Full Name",
+    "formPhone": "Phone",
+    "formEmail": "Email (optional)",
+    "formCity": "City",
+    "formCityOptions": ["Sombor", "Odžaci", "Crvenka", "Apatin", "Subotica", "Other"],
+    "formService": "Service Type",
+    "formServiceOptions": ["PVC windows/doors", "ALU windows/doors", "Terrace glazing", "Roller blinds", "Mosquito nets", "Repairs & service", "Other"],
+    "formMessage": "Message",
+    "formSubmit": "Send Request",
+    "formSelectPlaceholder": "Select..."
+  },
+
+  "footer": {
+    "description": "A family company with over 25 years of experience in PVC and ALU joinery installation. German quality in the heart of Vojvodina.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact",
+    "copyright": "© 2026 WiederBau PVC i ALU Sombor. All rights reserved."
+  }
+}

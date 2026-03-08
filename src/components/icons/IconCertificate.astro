@@ -1,0 +1,22 @@
+---
+interface Props {
+  class?: string;
+  size?: number;
+}
+const { class: className = '', size = 48 } = Astro.props;
+---
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class={className}>
+  <!-- Certificate body -->
+  <rect x="6" y="4" width="36" height="28" rx="2" />
+  <!-- Text lines -->
+  <line x1="14" y1="12" x2="34" y2="12" />
+  <line x1="18" y1="17" x2="30" y2="17" />
+  <line x1="16" y1="22" x2="32" y2="22" />
+  <!-- Ribbon seal circle -->
+  <circle cx="24" cy="32" r="5" />
+  <!-- Ribbon tails -->
+  <line x1="21" y1="36" x2="18" y2="44" />
+  <line x1="27" y1="36" x2="30" y2="44" />
+  <!-- Star in seal -->
+  <path d="M24 29 L25 31 L27 31 L25.5 32.5 L26 34.5 L24 33.5 L22 34.5 L22.5 32.5 L21 31 L23 31 Z" />
+</svg>

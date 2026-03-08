@@ -1,0 +1,160 @@
+{
+  "lang": "de",
+  "langName": "Deutsch",
+  "flag": "🇩🇪",
+
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "products": "Produkte",
+    "whyUs": "Warum wir",
+    "gallery": "Galerie",
+    "areas": "Servicegebiet",
+    "contact": "Kontakt",
+    "getQuote": "Angebot anfordern"
+  },
+
+  "hero": {
+    "title": "WiederBau",
+    "subtitle": "PVC & ALU Tischlerei",
+    "tagline": "Deutsche Qualität im Herzen der Vojvodina",
+    "description": "Ein Familienunternehmen mit über 25 Jahren Erfahrung in der Installation und Reparatur von PVC- und ALU-Fenstern, Rollläden und Insektenschutz.",
+    "cta1": "Angebot anfordern",
+    "cta2": "Unsere Produkte",
+    "scrollDown": "Nach unten scrollen"
+  },
+
+  "about": {
+    "sectionTitle": "Über Uns",
+    "sectionSubtitle": "Eine Familientradition der Qualität",
+    "paragraph1": "WiederBau ist ein Familienunternehmen aus Sombor mit über 25 Jahren Erfahrung im Bereich PVC- und ALU-Tischlerei. Von Anfang an war es unsere Mission, jedem Kunden höchste Qualität und präzise Installation zu bieten.",
+    "paragraph2": "Wir verwenden ausschließlich VEKA deutsche Profile und ALUMIL Aluminium-Systeme — Marken, die Langlebigkeit, Energieeffizienz und modernes Design garantieren.",
+    "paragraph3": "Unser Expertenteam deckt die gesamte Vojvodina ab — von Sombor über Odžaci und Apatin bis Subotica. Wir sind stolz auf jedes abgeschlossene Projekt und jeden zufriedenen Kunden.",
+    "stat1Value": "25+",
+    "stat1Label": "Jahre Erfahrung",
+    "stat2Value": "1000+",
+    "stat2Label": "Zufriedene Kunden",
+    "stat3Value": "5000+",
+    "stat3Label": "Installierte Einheiten"
+  },
+
+  "services": {
+    "sectionTitle": "Unsere Leistungen",
+    "sectionSubtitle": "Komplettlösungen für Ihr Zuhause",
+    "pvcTitle": "PVC Fenster & Türen",
+    "pvcDesc": "Hochwertige PVC-Fenster und -Türen mit VEKA 5-Kammer-Profilen für maximale Energieeffizienz und Schalldämmung.",
+    "aluTitle": "ALU Fenster & Türen",
+    "aluDesc": "Premium ALUMIL Aluminium-Systeme für ein modernes Erscheinungsbild und außergewöhnliche Leistung. Ideal für große Glasflächen.",
+    "terraceTitle": "Terrassenverglasung",
+    "terraceDesc": "ALUMIL Schiebewände, die die Terrasse schließen, aber nie von der Natur trennen. Genießen Sie die Aussicht das ganze Jahr.",
+    "blindsTitle": "Rollläden",
+    "blindsDesc": "Montage und Reparatur aller Arten von Rollläden — PVC, Aluminium und elektrische Rollläden für Sicherheit und Komfort.",
+    "netsTitle": "Insektenschutz",
+    "netsDesc": "Maßgefertigte Insektenschutzgitter — feste, Schiebe- und Rollo-Systeme zum Schutz vor Insekten.",
+    "repairTitle": "Reparatur & Service",
+    "repairDesc": "Schneller und zuverlässiger Service für alle PVC- und ALU-Fenster. Glas-, Beschlag-, Schloss- und Dichtungsaustausch.",
+    "learnMore": "Mehr erfahren"
+  },
+
+  "products": {
+    "sectionTitle": "Unsere Produkte",
+    "sectionSubtitle": "Premium-Marken, bewährte Qualität",
+    "tabPvc": "PVC Tischlerei",
+    "tabAlu": "ALU Tischlerei",
+    "tabBlinds": "Rollläden",
+    "tabNets": "Insektenschutz",
+    "pvcTitle": "VEKA PVC Profile",
+    "pvcDesc": "Wir verwenden ausschließlich deutsche VEKA 5-Kammer-Profile — Klasse A nach DIN EN 12608. VEKA Profile garantieren:",
+    "pvcFeature1": "Hervorragende Wärmedämmung",
+    "pvcFeature2": "Schalldämmung bis 47dB",
+    "pvcFeature3": "UV-Strahlung Beständigkeit",
+    "pvcFeature4": "Haltbarkeit von 50+ Jahren",
+    "pvcFeature5": "Individuelle Bogenformung",
+    "aluTitle": "ALUMIL Aluminium Systeme",
+    "aluDesc": "ALUMIL Systeme bieten modernes Design und außergewöhnliche Leistung für große Glasflächen:",
+    "aluFeature1": "Schiebewände für Terrassen",
+    "aluFeature2": "Minimalistische Profile",
+    "aluFeature3": "Hohe Glastraglast",
+    "aluFeature4": "Wasserbeständigkeit und Sicherheit",
+    "blindsTitle": "Rollläden für Jedes Zuhause",
+    "blindsDesc": "Wir bieten eine breite Palette von Rollläden, die auf Ihre Bedürfnisse zugeschnitten sind:",
+    "blindsFeature1": "PVC-Rollläden",
+    "blindsFeature2": "Aluminium-Rollläden",
+    "blindsFeature3": "Elektrische ferngesteuerte Rollläden",
+    "blindsFeature4": "Garagen-Rolltore",
+    "netsTitle": "Maßgefertigter Insektenschutz",
+    "netsDesc": "Schützen Sie Ihr Zuhause vor Insekten mit unseren Insektenschutzsystemen:",
+    "netsFeature1": "Feste Insektenschutzgitter",
+    "netsFeature2": "Schiebe-Insektenschutz",
+    "netsFeature3": "Rollo-Insektenschutz",
+    "netsFeature4": "Plissee-Insektenschutz"
+  },
+
+  "whyUs": {
+    "sectionTitle": "Warum WiederBau Wählen",
+    "sectionSubtitle": "Ihr zuverlässiger Partner für Tischlerei",
+    "stat1Value": "25+",
+    "stat1Label": "Jahre Erfahrung",
+    "stat1Desc": "Familienunternehmen mit Qualitätstradition seit 1999",
+    "stat2Value": "VEKA & ALUMIL",
+    "stat2Label": "Premium-Marken",
+    "stat2Desc": "Wir verwenden ausschließlich bewährte deutsche und europäische Profile",
+    "stat3Value": "Komplett",
+    "stat3Label": "Service",
+    "stat3Desc": "Von der Vermessung und Beratung über die Produktion bis zur professionellen Montage",
+    "stat4Value": "Subventionen",
+    "stat4Label": "Dokumentationshilfe",
+    "stat4Desc": "Wir helfen Ihnen bei der Beantragung staatlicher Energieeffizienz-Subventionen"
+  },
+
+  "gallery": {
+    "sectionTitle": "Galerie Unserer Arbeiten",
+    "sectionSubtitle": "Sehen Sie unsere Projekte",
+    "filterAll": "Alle",
+    "filterWindows": "Fenster",
+    "filterDoors": "Türen",
+    "filterTerraces": "Terrassen",
+    "filterBlinds": "Rollläden",
+    "close": "Schließen"
+  },
+
+  "areas": {
+    "sectionTitle": "Servicegebiet",
+    "sectionSubtitle": "Wir decken die gesamte Vojvodina ab",
+    "description": "Unser Team deckt Sombor und die weitere Region ab. Kontaktieren Sie uns für Ihren Standort — wir kommen zur kostenlosen Vermessung zu Ihnen.",
+    "cities": ["Sombor", "Odžaci", "Crvenka", "Apatin", "Subotica", "Kula", "Bačka Topola"]
+  },
+
+  "contact": {
+    "sectionTitle": "Kontaktieren Sie Uns",
+    "sectionSubtitle": "Fordern Sie ein kostenloses Angebot an",
+    "infoTitle": "Kontaktinformationen",
+    "address": "Miloša Obilića 73, Sombor, Serbien",
+    "phone": "+381 64 216 1008",
+    "email": "wiederbau.sombor@gmail.com",
+    "workingHours": "Öffnungszeiten",
+    "weekdays": "Montag - Freitag: 08:00 - 17:00",
+    "saturday": "Samstag: 08:00 - 13:00",
+    "sunday": "Sonntag: Geschlossen",
+    "followUs": "Folgen Sie uns",
+    "formTitle": "Angebot Anfordern",
+    "formName": "Vollständiger Name",
+    "formPhone": "Telefon",
+    "formEmail": "E-Mail (optional)",
+    "formCity": "Stadt",
+    "formCityOptions": ["Sombor", "Odžaci", "Crvenka", "Apatin", "Subotica", "Andere"],
+    "formService": "Serviceart",
+    "formServiceOptions": ["PVC Fenster/Türen", "ALU Fenster/Türen", "Terrassenverglasung", "Rollläden", "Insektenschutz", "Reparatur & Service", "Andere"],
+    "formMessage": "Nachricht",
+    "formSubmit": "Anfrage senden",
+    "formSelectPlaceholder": "Auswählen..."
+  },
+
+  "footer": {
+    "description": "Familienunternehmen mit über 25 Jahren Erfahrung in der PVC- und ALU-Tischlerei. Deutsche Qualität im Herzen der Vojvodina.",
+    "quickLinks": "Schnelllinks",
+    "contactTitle": "Kontakt",
+    "copyright": "© 2026 WiederBau PVC i ALU Sombor. Alle Rechte vorbehalten."
+  }
+}

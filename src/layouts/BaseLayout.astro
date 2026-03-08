@@ -1,0 +1,166 @@
+---
+import '../styles/global.css';
+import { getLangFromUrl, getTranslations, type Lang, locales, defaultLang } from '../i18n';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: Lang;
+}
+
+const currentLang = Astro.props.lang || getLangFromUrl(Astro.url);
+const t = getTranslations(currentLang);
+
+const title = Astro.props.title || `WiederBau PVC i ALU Sombor | ${t.hero.tagline}`;
+const description = Astro.props.description || t.footer.description;
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://wiederbau.rs';
+const canonicalPath = currentLang === defaultLang ? '/' : `/${currentLang}/`;
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
+const ogImage = `${siteUrl}/images/hero/hero-bg.jpg`;
+
+const localeMap: Record<Lang, string> = {
+  sr: 'sr_RS',
+  en: 'en_US',
+  hu: 'hu_HU',
+  de: 'de_DE',
+};
+---
+
+<!doctype html>
+<html lang={currentLang} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0369a1" />
+
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href={canonicalUrl} />
+    {locales.map((loc) => {
+      const href = loc.code === defaultLang ? `${siteUrl}/` : `${siteUrl}/${loc.code}/`;
+      return <link rel="alternate" hreflang={loc.code} href={href} />;
+    })}
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={localeMap[currentLang]} />
+    {locales.filter(l => l.code !== currentLang).map(l => (
+      <meta property="og:locale:alternate" content={localeMap[l.code]} />
+    ))}
+    <meta property="og:site_name" content="WiederBau PVC i ALU Sombor" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "WiederBau PVC i ALU Sombor",
+      "description": "PVC i ALU stolarija - prozori, vrata, roletne, komarnici. Porodična firma sa 25+ godina iskustva.",
+      "image": ogImage,
+      "url": siteUrl,
+      "telephone": "+381642161008",
+      "email": "wiederbau.sombor@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Miloša Obilića 73",
+        "addressLocality": "Sombor",
+        "postalCode": "25000",
+        "addressCountry": "RS"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.7747,
+        "longitude": 19.1128
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "13:00"
+        }
+      ],
+      "priceRange": "$$",
+      "areaServed": [
+        { "@type": "City", "name": "Sombor" },
+        { "@type": "City", "name": "Odžaci" },
+        { "@type": "City", "name": "Crvenka" },
+        { "@type": "City", "name": "Apatin" },
+        { "@type": "City", "name": "Subotica" },
+        { "@type": "City", "name": "Kula" },
+        { "@type": "City", "name": "Bačka Topola" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100067917799799",
+        "https://www.instagram.com/pvc_sombor_wiederbau_veka"
+      ]
+    })} />
+
+    <title>{title}</title>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <slot />
+
+    <script>
+      // Scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-in');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+      document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      const langBtn = document.getElementById('lang-btn');
+      if (navbar) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 80) {
+            navbar.classList.add('navbar-scrolled');
+            langBtn?.classList.remove('text-white');
+            langBtn?.classList.add('text-gray-700');
+          } else {
+            navbar.classList.remove('navbar-scrolled');
+            langBtn?.classList.add('text-white');
+            langBtn?.classList.remove('text-gray-700');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

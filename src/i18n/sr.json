@@ -1,0 +1,160 @@
+{
+  "lang": "sr",
+  "langName": "Srpski",
+  "flag": "🇷🇸",
+
+  "nav": {
+    "home": "Početna",
+    "about": "O nama",
+    "services": "Usluge",
+    "products": "Proizvodi",
+    "whyUs": "Zašto mi",
+    "gallery": "Galerija",
+    "areas": "Područje rada",
+    "contact": "Kontakt",
+    "getQuote": "Zatražite ponudu"
+  },
+
+  "hero": {
+    "title": "WiederBau",
+    "subtitle": "PVC i ALU Stolarija",
+    "tagline": "Nemački kvalitet u srcu Vojvodine",
+    "description": "Porodična firma sa više od 25 godina iskustva u ugradnji i popravku PVC i ALU stolarije, roletni i komarnika.",
+    "cta1": "Zatražite ponudu",
+    "cta2": "Naši proizvodi",
+    "scrollDown": "Skrolujte nadole"
+  },
+
+  "about": {
+    "sectionTitle": "O Nama",
+    "sectionSubtitle": "Porodična tradicija kvaliteta",
+    "paragraph1": "WiederBau je porodična firma iz Sombora sa više od 25 godina iskustva u oblasti PVC i ALU stolarije. Od samog početka, naša misija je da svakom klijentu pružimo vrhunski kvalitet i preciznu ugradnju.",
+    "paragraph2": "Koristimo isključivo VEKA nemačke profile i ALUMIL aluminijumske sisteme — brendove koji garantuju dugotrajnost, energetsku efikasnost i moderan dizajn. Od merenja do finalne montaže, svaki korak radimo profesionalno i sa pažnjom.",
+    "paragraph3": "Naš tim stručnjaka pokriva celu Vojvodinu — od Sombora, preko Odžaka i Apatina, do Subotice. Ponosni smo na svaki završen projekat i zadovoljnog klijenta.",
+    "stat1Value": "25+",
+    "stat1Label": "Godina iskustva",
+    "stat2Value": "1000+",
+    "stat2Label": "Zadovoljnih klijenata",
+    "stat3Value": "5000+",
+    "stat3Label": "Ugrađenih jedinica"
+  },
+
+  "services": {
+    "sectionTitle": "Naše Usluge",
+    "sectionSubtitle": "Kompletna rešenja za vaš dom",
+    "pvcTitle": "PVC Prozori i Vrata",
+    "pvcDesc": "Visokokvalitetni PVC prozori i vrata sa VEKA 5-komornim profilima za maksimalnu energetsku efikasnost i zvučnu izolaciju.",
+    "aluTitle": "ALU Prozori i Vrata",
+    "aluDesc": "Premium aluminijumski sistemi ALUMIL za moderan izgled i izuzetne performanse. Idealno za velike staklene površine.",
+    "terraceTitle": "Zastakljivanje Terasa",
+    "terraceDesc": "ALUMIL klizne stene koje zatvaraju terasu ali je ne odvajaju od prirode. Uživajte u pogledu tokom cele godine.",
+    "blindsTitle": "Roletne",
+    "blindsDesc": "Ugradnja i popravka svih vrsta roletni — PVC, aluminijumske i elektro roletne za sigurnost i udobnost vašeg doma.",
+    "netsTitle": "Komarnici",
+    "netsDesc": "Proizvodnja i ugradnja komarnika po meri — fiksni, klizni i rolo sistemi za zaštitu od insekata.",
+    "repairTitle": "Popravke i Servis",
+    "repairDesc": "Brz i pouzdan servis svih vrsta PVC i ALU stolarije. Zamena stakla, okova, brava i guma.",
+    "learnMore": "Saznajte više"
+  },
+
+  "products": {
+    "sectionTitle": "Naši Proizvodi",
+    "sectionSubtitle": "Premium brendovi, dokazani kvalitet",
+    "tabPvc": "PVC Stolarija",
+    "tabAlu": "ALU Stolarija",
+    "tabBlinds": "Roletne",
+    "tabNets": "Komarnici",
+    "pvcTitle": "VEKA PVC Profili",
+    "pvcDesc": "Koristimo isključivo VEKA nemačke 5-komorne profile — Klasa A prema DIN EN 12608. VEKA profili garantuju:",
+    "pvcFeature1": "Odličnu toplotnu izolaciju",
+    "pvcFeature2": "Zvučnu izolaciju do 47dB",
+    "pvcFeature3": "Otpornost na UV zračenje",
+    "pvcFeature4": "Dugotrajnost 50+ godina",
+    "pvcFeature5": "Lučno oblikovanje po meri",
+    "aluTitle": "ALUMIL Aluminijumski Sistemi",
+    "aluDesc": "ALUMIL sistemi nude moderan dizajn i izuzetne performanse za velike staklene površine:",
+    "aluFeature1": "Klizne stene za terase",
+    "aluFeature2": "Minimalistični profili",
+    "aluFeature3": "Velika nosivost stakla",
+    "aluFeature4": "Vodootpornost i sigurnost",
+    "blindsTitle": "Roletne za Svaki Dom",
+    "blindsDesc": "Nudimo širok asortiman roletni prilagođenih vašim potrebama:",
+    "blindsFeature1": "PVC roletne",
+    "blindsFeature2": "Aluminijumske roletne",
+    "blindsFeature3": "Elektro roletne sa daljinskim",
+    "blindsFeature4": "Rolo vrata za garaže",
+    "netsTitle": "Komarnici Po Meri",
+    "netsDesc": "Zaštitite svoj dom od insekata uz naše komarnik sisteme:",
+    "netsFeature1": "Fiksni komarnici",
+    "netsFeature2": "Klizni komarnici",
+    "netsFeature3": "Rolo komarnici",
+    "netsFeature4": "Plise komarnici"
+  },
+
+  "whyUs": {
+    "sectionTitle": "Zašto Izabrati WiederBau",
+    "sectionSubtitle": "Vaš pouzdan partner za stolariju",
+    "stat1Value": "25+",
+    "stat1Label": "Godina iskustva",
+    "stat1Desc": "Porodična firma sa tradicijom kvaliteta od 1999. godine",
+    "stat2Value": "VEKA & ALUMIL",
+    "stat2Label": "Premium brendovi",
+    "stat2Desc": "Koristimo isključivo proverene nemačke i evropske profile",
+    "stat3Value": "Kompletna",
+    "stat3Label": "Usluga",
+    "stat3Desc": "Od merenja i savetovanja, preko proizvodnje, do profesionalne montaže",
+    "stat4Value": "Subvencije",
+    "stat4Label": "Pomoć sa dokumentacijom",
+    "stat4Desc": "Pomažemo vam sa prijavom za državne subvencije za energetsku efikasnost"
+  },
+
+  "gallery": {
+    "sectionTitle": "Galerija Naših Radova",
+    "sectionSubtitle": "Pogledajte naše projekte",
+    "filterAll": "Sve",
+    "filterWindows": "Prozori",
+    "filterDoors": "Vrata",
+    "filterTerraces": "Terase",
+    "filterBlinds": "Roletne",
+    "close": "Zatvori"
+  },
+
+  "areas": {
+    "sectionTitle": "Područje Rada",
+    "sectionSubtitle": "Pokrivamo celu Vojvodinu",
+    "description": "Naš tim pokriva Sombor i širu okolinu. Kontaktirajte nas za vaše mesto — dolazimo na adresu za besplatno merenje.",
+    "cities": ["Sombor", "Odžaci", "Crvenka", "Apatin", "Subotica", "Kula", "Bačka Topola"]
+  },
+
+  "contact": {
+    "sectionTitle": "Kontaktirajte Nas",
+    "sectionSubtitle": "Zatražite besplatnu ponudu",
+    "infoTitle": "Kontakt informacije",
+    "address": "Miloša Obilića 73, Sombor, Srbija",
+    "phone": "+381 64 216 1008",
+    "email": "wiederbau.sombor@gmail.com",
+    "workingHours": "Radno vreme",
+    "weekdays": "Ponedeljak - Petak: 08:00 - 17:00",
+    "saturday": "Subota: 08:00 - 13:00",
+    "sunday": "Nedelja: Zatvoreno",
+    "followUs": "Pratite nas",
+    "formTitle": "Zatražite Ponudu",
+    "formName": "Ime i Prezime",
+    "formPhone": "Telefon",
+    "formEmail": "Email (opciono)",
+    "formCity": "Grad",
+    "formCityOptions": ["Sombor", "Odžaci", "Crvenka", "Apatin", "Subotica", "Drugo"],
+    "formService": "Vrsta usluge",
+    "formServiceOptions": ["PVC prozori/vrata", "ALU prozori/vrata", "Zastakljivanje terasa", "Roletne", "Komarnici", "Popravke i servis", "Ostalo"],
+    "formMessage": "Poruka",
+    "formSubmit": "Pošaljite zahtev",
+    "formSelectPlaceholder": "Izaberite..."
+  },
+
+  "footer": {
+    "description": "Porodična firma sa više od 25 godina iskustva u ugradnji PVC i ALU stolarije. Nemački kvalitet u srcu Vojvodine.",
+    "quickLinks": "Brzi linkovi",
+    "contactTitle": "Kontakt",
+    "copyright": "© 2026 WiederBau PVC i ALU Sombor. Sva prava zadržana."
+  }
+}

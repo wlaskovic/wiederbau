@@ -1,0 +1,168 @@
+---
+import Section from '../ui/Section.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+import { getLangFromUrl, getTranslations } from '../../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = getTranslations(lang);
+
+const tabs = [
+  { id: 'pvc', label: t.products.tabPvc },
+  { id: 'alu', label: t.products.tabAlu },
+  { id: 'blinds', label: t.products.tabBlinds },
+  { id: 'nets', label: t.products.tabNets },
+];
+---
+
+<Section id="proizvodi" bg="white">
+  <SectionHeading title={t.products.sectionTitle} subtitle={t.products.sectionSubtitle} />
+
+  <!-- Tabs -->
+  <div class="flex flex-wrap justify-center gap-2 mb-12" data-animate>
+    {tabs.map((tab, i) => (
+      <button
+        class={`product-tab px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 cursor-pointer ${
+          i === 0
+            ? 'bg-primary-700 text-white shadow-lg'
+            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+        }`}
+        data-tab={tab.id}
+      >
+        {tab.label}
+      </button>
+    ))}
+  </div>
+
+  <!-- Tab Panels -->
+  <div class="relative">
+    <!-- PVC -->
+    <div class="tab-content active" data-panel="pvc">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="inline-block px-3 py-1 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full mb-4">VEKA</div>
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t.products.pvcTitle}</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">{t.products.pvcDesc}</p>
+          <ul class="space-y-3">
+            {[t.products.pvcFeature1, t.products.pvcFeature2, t.products.pvcFeature3, t.products.pvcFeature4, t.products.pvcFeature5].map((f) => (
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="text-gray-700">{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <div class="aspect-[4/3] bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
+              <img src="/images/products/pvc-windows.jpg" alt="VEKA PVC" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALU -->
+    <div class="tab-content" data-panel="alu" style="display:none;">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="inline-block px-3 py-1 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full mb-4">ALUMIL</div>
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t.products.aluTitle}</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">{t.products.aluDesc}</p>
+          <ul class="space-y-3">
+            {[t.products.aluFeature1, t.products.aluFeature2, t.products.aluFeature3, t.products.aluFeature4].map((f) => (
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="text-gray-700">{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <div class="aspect-[4/3] bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
+              <img src="/images/products/alu-terrace.jpg" alt="ALUMIL ALU" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blinds -->
+    <div class="tab-content" data-panel="blinds" style="display:none;">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t.products.blindsTitle}</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">{t.products.blindsDesc}</p>
+          <ul class="space-y-3">
+            {[t.products.blindsFeature1, t.products.blindsFeature2, t.products.blindsFeature3, t.products.blindsFeature4].map((f) => (
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="text-gray-700">{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <div class="aspect-[4/3] bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
+              <img src="/images/products/blinds.jpg" alt="Roletne" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nets -->
+    <div class="tab-content" data-panel="nets" style="display:none;">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t.products.netsTitle}</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">{t.products.netsDesc}</p>
+          <ul class="space-y-3">
+            {[t.products.netsFeature1, t.products.netsFeature2, t.products.netsFeature3, t.products.netsFeature4].map((f) => (
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="text-gray-700">{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <div class="aspect-[4/3] bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
+              <img src="/images/products/nets.jpg" alt="Komarnici" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>
+
+<script>
+  document.querySelectorAll('.product-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const targetId = (tab as HTMLElement).dataset.tab;
+
+      // Update tab styles
+      document.querySelectorAll('.product-tab').forEach((t) => {
+        t.classList.remove('bg-primary-700', 'text-white', 'shadow-lg');
+        t.classList.add('bg-gray-100', 'text-gray-600');
+      });
+      tab.classList.add('bg-primary-700', 'text-white', 'shadow-lg');
+      tab.classList.remove('bg-gray-100', 'text-gray-600');
+
+      // Update panels
+      document.querySelectorAll('.tab-content').forEach((panel) => {
+        const p = panel as HTMLElement;
+        p.classList.remove('active');
+        p.style.display = 'none';
+      });
+      const target = document.querySelector(`[data-panel="${targetId}"]`) as HTMLElement;
+      if (target) {
+        target.style.display = 'block';
+        requestAnimationFrame(() => target.classList.add('active'));
+      }
+    });
+  });
+</script>

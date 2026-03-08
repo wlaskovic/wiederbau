@@ -1,0 +1,160 @@
+{
+  "lang": "hu",
+  "langName": "Magyar",
+  "flag": "🇭🇺",
+
+  "nav": {
+    "home": "Kezdőlap",
+    "about": "Rólunk",
+    "services": "Szolgáltatások",
+    "products": "Termékeink",
+    "whyUs": "Miért mi",
+    "gallery": "Galéria",
+    "areas": "Munkaterület",
+    "contact": "Kapcsolat",
+    "getQuote": "Árajánlat kérése"
+  },
+
+  "hero": {
+    "title": "WiederBau",
+    "subtitle": "PVC és ALU Asztalos",
+    "tagline": "Német minőség Vajdaság szívében",
+    "description": "Családi vállalkozás több mint 25 éves tapasztalattal PVC és ALU nyílászárók beszerelésében, javításában, valamint redőnyök és szúnyoghálók gyártásában.",
+    "cta1": "Árajánlat kérése",
+    "cta2": "Termékeink",
+    "scrollDown": "Görgessen le"
+  },
+
+  "about": {
+    "sectionTitle": "Rólunk",
+    "sectionSubtitle": "Családi minőségi hagyomány",
+    "paragraph1": "A WiederBau egy zombori családi vállalkozás, több mint 25 éves tapasztalattal a PVC és ALU nyílászárók területén. Kezdettől fogva küldetésünk, hogy minden ügyfelünknek csúcsminőséget és precíz beszerelést biztosítsunk.",
+    "paragraph2": "Kizárólag VEKA német profilokat és ALUMIL alumínium rendszereket használunk — olyan márkákat, amelyek tartósságot, energiahatékonyságot és modern designt garantálnak.",
+    "paragraph3": "Szakértő csapatunk egész Vajdaságot lefedi — Zombortól Odzacin és Apatinon át Szabadkáig. Büszkék vagyunk minden befejezett projektre és elégedett ügyfelünkre.",
+    "stat1Value": "25+",
+    "stat1Label": "Év tapasztalat",
+    "stat2Value": "1000+",
+    "stat2Label": "Elégedett ügyfél",
+    "stat3Value": "5000+",
+    "stat3Label": "Beszerelt egység"
+  },
+
+  "services": {
+    "sectionTitle": "Szolgáltatásaink",
+    "sectionSubtitle": "Teljes körű megoldások otthonához",
+    "pvcTitle": "PVC Ablakok és Ajtók",
+    "pvcDesc": "Kiváló minőségű PVC ablakok és ajtók VEKA 5 kamrás profilokkal a maximális energiahatékonyság és hangszigetelés érdekében.",
+    "aluTitle": "ALU Ablakok és Ajtók",
+    "aluDesc": "Prémium ALUMIL alumínium rendszerek modern megjelenésért és kiemelkedő teljesítményért. Ideális nagy üvegfelületekhez.",
+    "terraceTitle": "Terasz Üvegezés",
+    "terraceDesc": "ALUMIL tolófalak, amelyek lezárják a teraszt, de nem választják el a természettől. Élvezze a kilátást egész évben.",
+    "blindsTitle": "Redőnyök",
+    "blindsDesc": "Minden típusú redőny beszerelése és javítása — PVC, alumínium és elektromos redőnyök otthona biztonságáért.",
+    "netsTitle": "Szúnyoghálók",
+    "netsDesc": "Méretre gyártott szúnyoghálók — fix, tolós és roló rendszerek a rovarok elleni védelemhez.",
+    "repairTitle": "Javítás és Szerviz",
+    "repairDesc": "Gyors és megbízható szerviz minden PVC és ALU nyílászáróhoz. Üveg, vasalat, zár és tömítés csere.",
+    "learnMore": "Tudjon meg többet"
+  },
+
+  "products": {
+    "sectionTitle": "Termékeink",
+    "sectionSubtitle": "Prémium márkák, bizonyított minőség",
+    "tabPvc": "PVC Nyílászárók",
+    "tabAlu": "ALU Nyílászárók",
+    "tabBlinds": "Redőnyök",
+    "tabNets": "Szúnyoghálók",
+    "pvcTitle": "VEKA PVC Profilok",
+    "pvcDesc": "Kizárólag VEKA német 5 kamrás profilokat használunk — A osztály a DIN EN 12608 szerint. A VEKA profilok garantálják:",
+    "pvcFeature1": "Kiváló hőszigetelés",
+    "pvcFeature2": "Hangszigetelés 47dB-ig",
+    "pvcFeature3": "UV-sugárzás ellenállás",
+    "pvcFeature4": "50+ év tartósság",
+    "pvcFeature5": "Egyedi ívformázás",
+    "aluTitle": "ALUMIL Alumínium Rendszerek",
+    "aluDesc": "Az ALUMIL rendszerek modern designt és kiváló teljesítményt kínálnak nagy üvegfelületekhez:",
+    "aluFeature1": "Tolófalak teraszokhoz",
+    "aluFeature2": "Minimalista profilok",
+    "aluFeature3": "Nagy üvegteherbírás",
+    "aluFeature4": "Vízállóság és biztonság",
+    "blindsTitle": "Redőnyök Minden Otthonba",
+    "blindsDesc": "Széles redőny kínálatot nyújtunk az Ön igényeinek megfelelően:",
+    "blindsFeature1": "PVC redőnyök",
+    "blindsFeature2": "Alumínium redőnyök",
+    "blindsFeature3": "Elektromos távirányítós redőnyök",
+    "blindsFeature4": "Garázsredőnyök",
+    "netsTitle": "Méretre Készült Szúnyoghálók",
+    "netsDesc": "Védje otthonát a rovaroktól szúnyogháló rendszereinkkel:",
+    "netsFeature1": "Fix szúnyoghálók",
+    "netsFeature2": "Tolós szúnyoghálók",
+    "netsFeature3": "Roló szúnyoghálók",
+    "netsFeature4": "Pliszé szúnyoghálók"
+  },
+
+  "whyUs": {
+    "sectionTitle": "Miért Válassza a WiederBau-t",
+    "sectionSubtitle": "Megbízható partnerünk a nyílászárókban",
+    "stat1Value": "25+",
+    "stat1Label": "Év tapasztalat",
+    "stat1Desc": "Családi vállalkozás minőségi hagyománnyal 1999 óta",
+    "stat2Value": "VEKA & ALUMIL",
+    "stat2Label": "Prémium márkák",
+    "stat2Desc": "Kizárólag bevált német és európai profilokat használunk",
+    "stat3Value": "Teljes körű",
+    "stat3Label": "Szolgáltatás",
+    "stat3Desc": "A felméréstől és tanácsadástól a gyártáson át a professzionális beszerelésig",
+    "stat4Value": "Szubvenciók",
+    "stat4Label": "Dokumentációs segítség",
+    "stat4Desc": "Segítünk az állami energiahatékonysági szubvenciók igénylésében"
+  },
+
+  "gallery": {
+    "sectionTitle": "Munkáink Galériája",
+    "sectionSubtitle": "Tekintse meg projektjeinket",
+    "filterAll": "Összes",
+    "filterWindows": "Ablakok",
+    "filterDoors": "Ajtók",
+    "filterTerraces": "Teraszok",
+    "filterBlinds": "Redőnyök",
+    "close": "Bezárás"
+  },
+
+  "areas": {
+    "sectionTitle": "Munkaterület",
+    "sectionSubtitle": "Egész Vajdaságot lefedjük",
+    "description": "Csapatunk Zombort és a tágabb régiót lefedi. Lépjen velünk kapcsolatba az Ön helyszínével — ingyenes felméréssel érkezünk az Ön címére.",
+    "cities": ["Zombor", "Odzaci", "Crvenka", "Apatin", "Szabadka", "Kula", "Bačka Topola"]
+  },
+
+  "contact": {
+    "sectionTitle": "Lépjen Velünk Kapcsolatba",
+    "sectionSubtitle": "Kérjen ingyenes árajánlatot",
+    "infoTitle": "Kapcsolati adatok",
+    "address": "Miloša Obilića 73, Zombor, Szerbia",
+    "phone": "+381 64 216 1008",
+    "email": "wiederbau.sombor@gmail.com",
+    "workingHours": "Nyitvatartás",
+    "weekdays": "Hétfő - Péntek: 08:00 - 17:00",
+    "saturday": "Szombat: 08:00 - 13:00",
+    "sunday": "Vasárnap: Zárva",
+    "followUs": "Kövessen minket",
+    "formTitle": "Árajánlat Kérése",
+    "formName": "Teljes név",
+    "formPhone": "Telefon",
+    "formEmail": "Email (opcionális)",
+    "formCity": "Város",
+    "formCityOptions": ["Zombor", "Odzaci", "Crvenka", "Apatin", "Szabadka", "Egyéb"],
+    "formService": "Szolgáltatás típusa",
+    "formServiceOptions": ["PVC ablakok/ajtók", "ALU ablakok/ajtók", "Terasz üvegezés", "Redőnyök", "Szúnyoghálók", "Javítás és szerviz", "Egyéb"],
+    "formMessage": "Üzenet",
+    "formSubmit": "Kérés küldése",
+    "formSelectPlaceholder": "Válasszon..."
+  },
+
+  "footer": {
+    "description": "Családi vállalkozás több mint 25 éves tapasztalattal PVC és ALU nyílászárók beszerelésében. Német minőség Vajdaság szívében.",
+    "quickLinks": "Gyors linkek",
+    "contactTitle": "Kapcsolat",
+    "copyright": "© 2026 WiederBau PVC i ALU Sombor. Minden jog fenntartva."
+  }
+}

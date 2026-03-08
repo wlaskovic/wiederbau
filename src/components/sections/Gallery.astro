@@ -1,0 +1,173 @@
+---
+import Section from '../ui/Section.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+import { getLangFromUrl, getTranslations } from '../../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = getTranslations(lang);
+
+const filters = [
+  { id: 'all', label: t.gallery.filterAll },
+  { id: 'prozori', label: t.gallery.filterWindows },
+  { id: 'vrata', label: t.gallery.filterDoors },
+  { id: 'terase', label: t.gallery.filterTerraces },
+  { id: 'roletne', label: t.gallery.filterBlinds },
+];
+
+const images = [
+  { src: '/images/gallery/gallery-1.jpg', alt: 'ALUMIL klizna stena', category: 'terase' },
+  { src: '/images/gallery/gallery-2.jpg', alt: 'PVC prozori ugradnja', category: 'prozori' },
+  { src: '/images/gallery/gallery-3.jpg', alt: 'VEKA lučni prozor', category: 'prozori' },
+  { src: '/images/gallery/gallery-4.jpg', alt: 'PVC prozori zima', category: 'prozori' },
+  { src: '/images/gallery/gallery-5.jpg', alt: 'PVC garažna kapija', category: 'vrata' },
+  { src: '/images/gallery/gallery-6.jpg', alt: 'ALUMIL zastakljivanje terase', category: 'terase' },
+  { src: '/images/gallery/gallery-7.jpg', alt: 'Montaža staklenih panela', category: 'terase' },
+  { src: '/images/gallery/gallery-8.jpg', alt: 'VEKA PVC prozor detalj', category: 'prozori' },
+  { src: '/images/gallery/gallery-9.jpg', alt: 'PVC balkonska vrata', category: 'vrata' },
+];
+---
+
+<Section id="galerija" bg="white">
+  <SectionHeading title={t.gallery.sectionTitle} subtitle={t.gallery.sectionSubtitle} />
+
+  <!-- Filters -->
+  <div class="flex flex-wrap justify-center gap-2 mb-10" data-animate>
+    {filters.map((filter, i) => (
+      <button
+        class={`gallery-filter px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer ${
+          i === 0 ? 'bg-primary-700 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+        }`}
+        data-filter={filter.id}
+      >
+        {filter.label}
+      </button>
+    ))}
+  </div>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6" id="gallery-grid">
+    {images.map((img, i) => (
+      <div
+        class="gallery-item group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
+        data-category={img.category}
+        data-animate="scale"
+        style={`transition-delay: ${i * 50}ms`}
+      >
+        <div class="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200">
+          <img
+            src={img.src}
+            alt={img.alt}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            onerror="this.parentElement.classList.add('flex','items-center','justify-center'); this.style.display='none'; this.parentElement.innerHTML='<svg class=\\'w-12 h-12 text-gray-300\\' fill=\\'none\\' stroke=\\'currentColor\\' viewBox=\\'0 0 48 48\\'><rect x=\\'4\\' y=\\'8\\' width=\\'40\\' height=\\'32\\' rx=\\'4\\'/><path d=\\'M4 28l12-8 8 6 8-10 12 8\\'/><circle cx=\\'16\\' cy=\\'18\\' r=\\'4\\'/></svg>'"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+          <span class="text-white text-sm font-medium">{img.alt}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox-overlay fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors cursor-pointer">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <button id="lightbox-prev" class="absolute left-4 text-white hover:text-gray-300 transition-colors cursor-pointer">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button id="lightbox-next" class="absolute right-4 text-white hover:text-gray-300 transition-colors cursor-pointer">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <img id="lightbox-img" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl object-contain" src="" alt="" />
+  </div>
+</Section>
+
+<script>
+  // Gallery filter
+  document.querySelectorAll('.gallery-filter').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = (btn as HTMLElement).dataset.filter;
+
+      document.querySelectorAll('.gallery-filter').forEach((b) => {
+        b.classList.remove('bg-primary-700', 'text-white');
+        b.classList.add('bg-gray-100', 'text-gray-600');
+      });
+      btn.classList.add('bg-primary-700', 'text-white');
+      btn.classList.remove('bg-gray-100', 'text-gray-600');
+
+      document.querySelectorAll('.gallery-item').forEach((item) => {
+        const el = item as HTMLElement;
+        if (filter === 'all' || el.dataset.category === filter) {
+          el.style.display = '';
+          el.style.opacity = '1';
+          el.style.transform = 'scale(1)';
+        } else {
+          el.style.opacity = '0';
+          el.style.transform = 'scale(0.95)';
+          setTimeout(() => { el.style.display = 'none'; }, 300);
+        }
+      });
+    });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox')!;
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  let currentIndex = 0;
+  let visibleItems: HTMLElement[] = [];
+
+  function getVisibleItems() {
+    return Array.from(document.querySelectorAll('.gallery-item')).filter(
+      (el) => (el as HTMLElement).style.display !== 'none'
+    ) as HTMLElement[];
+  }
+
+  document.querySelectorAll('.gallery-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      visibleItems = getVisibleItems();
+      currentIndex = visibleItems.indexOf(item as HTMLElement);
+      const img = item.querySelector('img');
+      if (img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.getElementById('lightbox-prev')?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    visibleItems = getVisibleItems();
+    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+    const img = visibleItems[currentIndex].querySelector('img');
+    if (img) { lightboxImg.src = img.src; lightboxImg.alt = img.alt; }
+  });
+
+  document.getElementById('lightbox-next')?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    visibleItems = getVisibleItems();
+    currentIndex = (currentIndex + 1) % visibleItems.length;
+    const img = visibleItems[currentIndex].querySelector('img');
+    if (img) { lightboxImg.src = img.src; lightboxImg.alt = img.alt; }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') document.getElementById('lightbox-prev')?.click();
+    if (e.key === 'ArrowRight') document.getElementById('lightbox-next')?.click();
+  });
+</script>

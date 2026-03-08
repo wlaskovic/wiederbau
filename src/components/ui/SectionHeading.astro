@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  light?: boolean;
+}
+
+const { title, subtitle, light = false } = Astro.props;
+---
+
+<div class="text-center mb-16" data-animate>
+  <h2 class={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${light ? 'text-white' : 'text-gray-900'}`}>
+    {title}
+  </h2>
+  <div class="w-20 h-1 bg-accent-500 mx-auto rounded-full mb-4"></div>
+  {subtitle && (
+    <p class={`text-lg md:text-xl max-w-2xl mx-auto ${light ? 'text-gray-300' : 'text-gray-500'}`}>
+      {subtitle}
+    </p>
+  )}
+</div>

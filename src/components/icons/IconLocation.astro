@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string;
+  size?: number;
+}
+const { class: className = '', size = 48 } = Astro.props;
+---
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class={className}>
+  <!-- Pin shape -->
+  <path d="M24 44 C24 44 38 28 38 18 C38 10.268 31.732 4 24 4 C16.268 4 10 10.268 10 18 C10 28 24 44 24 44 Z" />
+  <!-- Inner circle -->
+  <circle cx="24" cy="18" r="6" />
+</svg>

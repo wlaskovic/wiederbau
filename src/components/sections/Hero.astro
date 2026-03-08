@@ -1,0 +1,65 @@
+---
+import Button from '../ui/Button.astro';
+import { getLangFromUrl, getTranslations } from '../../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = getTranslations(lang);
+const base = lang === 'sr' ? '' : `/${lang}`;
+---
+
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background -->
+  <div
+    class="absolute inset-0 hero-parallax bg-primary-900"
+    style="background-image: url('/images/hero/hero-bg.jpg');"
+  ></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-primary-950/80 via-primary-900/70 to-primary-950/90"></div>
+
+  <!-- Decorative elements -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-400/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div data-animate class="mb-6">
+      <span class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-accent-400 border border-white/10">
+        25+ {lang === 'sr' ? 'godina iskustva' : lang === 'en' ? 'years of experience' : lang === 'hu' ? 'év tapasztalat' : 'Jahre Erfahrung'}
+      </span>
+    </div>
+
+    <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-4" data-animate>
+      {t.hero.title}<span class="text-accent-400">.</span>
+    </h1>
+
+    <p class="text-xl md:text-2xl font-semibold text-primary-200 mb-2" data-animate>
+      {t.hero.subtitle}
+    </p>
+
+    <p class="text-2xl md:text-3xl font-bold text-accent-400 mb-6" data-animate>
+      {t.hero.tagline}
+    </p>
+
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed" data-animate>
+      {t.hero.description}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center" data-animate>
+      <Button href={`${base}/#kontakt`} variant="secondary" size="lg">
+        {t.hero.cta1}
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </Button>
+      <Button href={`${base}/#proizvodi`} variant="outline" size="lg">
+        {t.hero.cta2}
+      </Button>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  </div>
+</section>
